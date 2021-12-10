@@ -1,6 +1,6 @@
-
+***
 //내가 포기 할 때까진 아직 끝난 게 아니다
-
+***
 
 
 //이번엔 난수를 생성하는 코드다
@@ -9,6 +9,8 @@
 
 //자세한 내용은 LottoNumbers에 기재한다
 
+***
+```ruby
 package day03;
 
 public class TestLottoNumbers {
@@ -20,3 +22,4 @@ public class TestLottoNumbers {
 	}
 
 }
+```
