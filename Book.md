@@ -1,7 +1,7 @@
-
+***
 //내가 포기 할 때까진 아직 끝난 게 아니다
-
-
+***
+```ruby
 
 package day03;
 
@@ -55,3 +55,5 @@ public class Book {
 		System.out.println("이름 : "+name+" / 가격 : "+price+" / 저자 : "+author+" / 출판사 : "+publishing);
 	}
 }
+
+```
