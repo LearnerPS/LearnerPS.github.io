@@ -9,7 +9,7 @@
 //코딩량을 줄여줄 수 있는 필수적인 방식! :)
 
 ***
-```ruby
+
 
 package school;
 
@@ -25,7 +25,7 @@ public class MyStudent extends Person {
 
 }//end class
 
-```
+
 ***
 //우선 MyStudent라는 이름으로 자식 클래스를 생성한다
 
@@ -38,7 +38,7 @@ public class MyStudent extends Person {
 //다음으로 직원에 관련된 자식 클래스를 MyEmp라는 이름으로 생성.. 하려 했는데..
 
 ***
-```ruby
+
 
 package school;
 
@@ -59,7 +59,7 @@ public class MyEmp {extends Person {
 
 }//end class
 
-```
+
 ***
 
 //하다가 보니 빨간줄 투성이가 되고 여기저기가 뒤엉켜버렸다... 하..
