@@ -22,7 +22,7 @@ public class TestList {
 		intList.add( 7 );
 		intList.add( 9 );
 		
-    //총합 계산
+    		//총합 계산
 		int sum = 0;
 		for(int i=0; i<intList.size(); i++) {
 			sum += intList.get(i);
