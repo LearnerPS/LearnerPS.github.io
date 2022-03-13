@@ -1,0 +1,100 @@
+***
+//내가 포기 할 때까진 아직 끝난 게 아니다
+***
+```ruby
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>회원 등록</title>
+	</head>
+	<body>
+		<h1>회원 등록</h1>
+	
+		<form action="jsp/form1.jsp" method="">
+			<fieldset>
+				<legend>계정정보</legend>
+				<label>사용할 아이디 
+					<input type="text" name="memid" placeholder="영어로 입력" required="required">  
+				</label> <br>
+				
+				<label for="id_pw">사용할 암호</label>
+				<input type="password" name="mempw" id="id_pw"> <br>
+				
+				사용할 이름
+				<input type="text" name="memname"> <br>
+			</fieldset>
+			
+			<fieldset>
+				<legend>경력</legend>
+				<label>최종학력 
+					<input type="search" name="keyword">
+				</label> <br>
+				
+				<label>홈페이지
+					<input type="url" name="homepage" value="http://" readonly="readonly">   
+				</label> <br>
+				
+				<label>태어난 해
+					<input type="number" name="birthYear">
+				</label> <br>
+				
+				<label>성별
+					<input type="radio" value="male" name="gender">남자
+					<input type="radio" value="female" name="gender">여자
+				</label> <br>
+				<label>
+					가입된 OTT를 선택
+					<input type="checkbox" name="ott" value="netflix">netflix
+					<input type="checkbox" name="ott" value="disney+">disney+
+				</label>  <br>
+				
+				<label>
+					좋아하는 색깔을 선택하세요
+					<input type="color" name="color">
+				</label> <br>
+				<label>
+					생일은?
+					<input type="date" name="birthdate">
+				</label> <br>
+				<label>
+					태어난 달은?
+					<input type="month" name="birthmonth">
+				</label> <br>
+				<label>
+					몇번째 주에 태어났나?
+					<input type="week" name="birthweek">
+				</label> <br>
+
+				<label>
+					태어난 지역은?
+					<select name="birth_area">
+						<option>서울</option>
+						<option>경기도</option>
+						<option>강원도</option>
+						<option>충청도</option>
+						<option selected="selected">경상도</option>
+						<option>전라도</option>
+						<option>제주도</option>
+						<option>북한</option>
+						<option>해외</option>
+					</select>
+				</label> <br>
+				
+				<label>
+					자기소개
+					<textarea name="intro" rows="3" cols="50">저는~~~~~~</textarea>
+				</label> <br>
+				
+				
+			</fieldset>
+			
+			<input type="submit" value="등록">
+			<input type="reset" value="처음으로">
+		</form>
+		
+	</body>
+</html>
+
+```
