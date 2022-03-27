@@ -1,0 +1,88 @@
+***
+//내가 포기 할 때까진 아직 끝난 게 아니다
+***
+```ruby
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>calculator</title>
+    <h1 style="color: #ff6b81;">[ Calculator ]</h1>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+        	padding: 10px 20px;
+            text-align: center;
+            color: #ff6b81;
+        }
+        input {
+            text-align: right;
+            border: none;
+            color: #ff6b81;
+        }
+        input:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+ <table border="1">
+    <tr>
+        <td colspan="4">
+            <input type="text" placeholder="0" id="display">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <input type="text" placeholder="result" id="result">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" onclick="reset()">AC</td>
+        <td onclick="add('/')">/</td>
+    </tr>
+    <tr>
+        <td onclick="add(7)">7</td>
+        <td onclick="add(8)">8</td>
+        <td onclick="add(9)">9</td>
+        <td onclick="add('*')">*</td>
+    </tr>
+    <tr>
+        <td onclick="add(4)">4</td>
+        <td onclick="add(5)">5</td>
+        <td onclick="add(6)">6</td>
+        <td onclick="add('-')">-</td>
+    </tr>
+    <tr>
+        <td onclick="add(1)">1</td>
+        <td onclick="add(2)">2</td>
+        <td onclick="add(3)">3</td>
+        <td onclick="add('+')">+</td>
+    </tr>
+    <tr>
+        <td colspan="2" onclick="add(0)">0</td>
+        <td onclick="add('.')">.</td>
+        <td onclick="calculate()">=</td>
+    </tr>
+</table>
+ <script>
+    function add(char) {
+    var display = document.getElementById('display'); 
+    display.value = display.value + char;
+}
+	function calculate() {
+    var display = document.getElementById('display');
+    var result = eval(display.value); 
+    document.getElementById('result').value = result;
+}
+	function reset() {
+		document.getElementById('display').value = "";
+		document.getElementById('result').value = "";
+}
+ </script>
+</body>
+</html>
+
+```
