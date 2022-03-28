@@ -1,0 +1,43 @@
+***
+//내가 포기 할 때까진 아직 끝난 게 아니다
+***
+```ruby
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript 1</title>
+	<script type="text/javascript">
+	function increase(){
+		count++
+		console.log(count)
+	}
+	var count = 0
+	///////////////
+	
+	
+	</script>
+</head>
+<body>
+
+	<button onclick="count++; console.log(count) ">OK 1</button>
+	<button onclick="increase()">OK 2</button>
+	
+	<button id="ok2">OK 2</button>
+	<script type="text/javascript">
+		console.log( increase )
+		var ok2 = 5;
+		ok2.onclick = increase;
+	</script>
+	<script type="text/javascript">
+	
+	var o2 = document.getElementById("ok2")
+	console.log( "o2=", o2 )
+	o2.onclick = increase ;
+	</script>
+	
+</body>
+</html>
+
+```
