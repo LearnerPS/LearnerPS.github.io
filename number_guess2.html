@@ -1,0 +1,64 @@
+***
+//내가 포기 할 때까진 아직 끝난 게 아니다
+***
+```ruby
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>숫자맞추기 게임 2</title>
+	<style type="text/css">
+		#wrapper{
+			width: 600px;
+			margin: 0px auto;
+		}
+	</style>
+	<script type="text/javascript">
+		// 선언부
+		var com_num = Math.floor(Math.random()*100 + 1 );
+		console.log("com_num = "+com_num)
+		
+		 function check_num(){
+			 //입력숫자추출
+			 var num = document.getElementById("num");
+			 console.log( "num.value=",num.value )
+			 var msg = document.getElementById("msg")//결과출력
+			
+			 if( com_num < num.value ){
+				 msg.innerHTML = num.value + " 낮춰주세요<br>" + msg.innerHTML
+			 }else if(com_num > num.value ){
+				 msg.innerHTML = num.value + " 높여주세요<br>" + msg.innerHTML
+			 }else{
+				 msg.innerHTML = num.value + " 정답입니다<br>" + msg.innerHTML
+			 }
+			 num.value = ""  //입력숫자삭제
+		 }
+	</script>
+	<script type="text/javascript">
+	
+		window.onload = function(){//웹페이지가 다 그려진 후
+			var cnum1 = document.getElementById("check_num")
+			cnum1.onclick =  check_num;
+		}
+		</script>
+ </head>
+<body>
+	<div id="wrapper">
+	<h1>숫자맞추기 게임</h1>
+	<p>컴퓨터가 정한 1~100사이 임의의 숫자를 맞춰 보세요</p>
+	
+	<fieldset>
+		<legend>숫자 맞추기 게임</legend>
+		
+		<label>
+			<input type="text" id="num">
+			<button id="check_num">숫자 확인</button>
+		</label>
+			<p id="msg"></p>
+	</fieldset>
+	</div>
+</body>
+</html>
+
+```
