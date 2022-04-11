@@ -1,0 +1,41 @@
+***
+//내가 포기 할 때까진 아직 끝난 게 아니다
+***
+```ruby
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ajax 1</title>
+	<style type="text/css">
+	div{ border: 1px solid red; }
+	</style>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#get_txt").click(function(){
+			$("#msg").load("./poem.txt");
+		});
+		$("#get_html").click(function(){
+			$.get( "./data_1.html", function(data){
+			
+				$(data).find("li").each( function(index, el){
+					console.log( el.innerHTML )
+					$("#msg").html( $("#msg").html() +","+ el.innerHTML )
+				} )
+			} );
+		});
+	})
+	</script>
+</head>
+<body>
+
+	<button id="get_txt">poem 가져오기</button>
+	<button id="get_html">HTML 가져오기</button>
+	<div id="msg"></div>
+
+</body>
+</html>
+
+```
