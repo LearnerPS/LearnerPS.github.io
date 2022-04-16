@@ -1,0 +1,44 @@
+***
+//내가 포기 할 때까진 아직 끝난 게 아니다
+***
+```ruby
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>기상청 일기예보</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript">
+
+	function click_weather(){
+		var url = "./jsp/proxy_kma.jsp";
+		var options = { 
+				url: url,
+				success: function( data ){
+					var w_data = $( data ).find("data")
+					console.log("data 갯수는 "+w_data.length)
+					w_data.each( function(index, el){
+						var h = $(el).find("hour").text() //시간
+						var d = $(el).find("day").text() //오늘,내일,모레
+						var t = $(el).find("temp").text() //온도
+						console.log(h+"시까지,"+d+","+t+"도")
+					} )
+				}
+			}
+		$.ajax( options )
+	}
+	$( function(){
+		$("#weather").click( click_weather )//버튼 누르면  click_weather() 실행
+	} )
+	</script>
+</head>
+<body>
+
+	<button id="weather">일기예보 가져오기</button>
+	<div id="msg"></div>
+
+</body>
+</html>
+
+```
