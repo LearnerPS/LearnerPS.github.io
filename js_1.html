@@ -1,0 +1,36 @@
+***
+//내가 포기 할 때까진 아직 끝난 게 아니다
+***
+```ruby
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>js 1</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var tds = document.getElementsByTagName("td")
+			alert( tds[0].innerHTML ) // tag사이(body) 내용을 접근
+			tds[0].innerHTML = "수정된 내용~~"
+		}
+	</script>
+</head>
+<body>
+
+	<h1>js 1</h1>
+	<table>
+		<tr>
+			<th>Column 1 Heading</th>
+			<th>Column 2 Heading</th>
+		</tr>
+		<tr>
+			<td>Row 1: Col 1</td>
+			<td>Row 1: Col 2</td>
+		</tr>
+	</table>
+
+</body>
+</html>
+
+```
