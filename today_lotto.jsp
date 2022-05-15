@@ -1,0 +1,34 @@
+***
+//내가 포기 할 때까진 아직 끝난 게 아니다
+***
+```ruby
+
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.TreeSet"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>오늘의 로또 추천 번호</title>
+</head>
+<body>
+	<h1>오늘의 로또 추천 번호</h1>
+<%
+TreeSet<Integer> set = new TreeSet<Integer>();
+while(set.size() < 6) {
+	set.add(  (int)(Math.random()*45)+1    );
+}
+ArrayList<Integer> list = new ArrayList<Integer>(set);
+%>
+<ul>
+<% for(Integer i : list) { %>
+	<li><%= i %></li>
+<% }  %>
+</ul>
+
+</body>
+</html>
+
+```
